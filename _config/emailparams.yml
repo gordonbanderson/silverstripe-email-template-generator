@@ -1,0 +1,23 @@
+---
+Name: silverstripe-email-template-generator
+---
+Suilven\EmailTemplateGenerator\Task\GenerateEmailTemplatesTask
+  - client_admin_team_name: 'Acme Inc'
+
+  # colors
+
+  # buttons
+  - button_background_color: '#555'
+  - button_border_color: '#555'
+
+  # main background color
+  - background_color: '#fff'
+
+  # logo
+  - logo_url: https://www.silverstripe.org/themes/ssv3/img/global-logo-open-source.svg
+  - logo_width: 192
+  - logo_height: 46
+
+  # hero image
+  - hero_image_url: http://placehold.it/600x300
+  - hero_image_width: 600

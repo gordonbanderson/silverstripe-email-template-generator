@@ -1,0 +1,36 @@
+{
+  "name": "suilven/silverstripe-email-template-generator",
+  "type": "silverstripe-vendormodule",
+  "description": "Generate email templates from precrafted templates using your own color scheme and parameters.",
+  "homepage": "https://github.com/suilven/silverstripe-email-template-generator",
+  "keywords": ["email","templates","generator"],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Gordon Anderson",
+      "role": "Developer",
+      "email": "gordon.b.anderson@gmail.com",
+      "homepage": "https://github.com/gordonbanderson"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "silverstripe/framework": "^4@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Suilven\\EmailTemplateGenerator\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    },
+    "expose": [
+      "admin/client/dist",
+      "client/dist"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

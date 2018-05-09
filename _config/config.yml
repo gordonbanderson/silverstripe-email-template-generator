@@ -1,0 +1,11 @@
+---
+Name: silverstripe-email-template-generator
+---
+
+# Configure Admin Extensions:
+
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - "suilven/silverstripe-email-template-generator: admin/client/dist/styles/bundle.css"
+  extra_requirements_javascript:
+    - "suilven/silverstripe-email-template-generator: admin/client/dist/js/bundle.js"
