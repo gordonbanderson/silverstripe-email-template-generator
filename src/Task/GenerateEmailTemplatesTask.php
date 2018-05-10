@@ -47,14 +47,22 @@ class GenerateEmailTemplatesTask extends BuildTask
         }
 
         $templateScheme = $this->config()->get('template_scheme');
-        $templateVariablesArray = $this->getTemplateArrayData();
-        error_log(print_r($templateVariablesArray, 1));
+        $themeName = $this->config()->get('output_theme_name');
+
+        $variablesForTemplate = $this->getTemplateArrayData();
 
         $path = dirname(__FILE__) . '/../../emailTemplateSchemes/' . $templateScheme . '/Includes';
         error_log($path);
 
+        $savePath = dirname(__FILE__) . '/../../../themes/' . $themeName . '/templates/Includes';
+        error_log($savePath);
+
         if (!is_dir($path)) {
-            user_error("Path $path could not be found");
+            user_error("Source templates path $path could not be found");
+        }
+
+        if (!is_dir($savePath)) {
+            user_error("Processed templates path $savePath could not be found");
         }
 
         $cdir = scandir($path);
@@ -70,10 +78,17 @@ class GenerateEmailTemplatesTask extends BuildTask
             error_log('---- PROCESSING ----' . $fullPath);
 
             $template = file_get_contents($fullPath);
-            $output = SSViewer::execute_string($template, $templateVariablesArray);
+            $output = SSViewer::execute_string($template, $variablesForTemplate);
+            $outputFile = $savePath . '/' . $templateFile;
+            error_log($outputFile);
+
+            file_put_contents($outputFile, $output);
+
+            print_r($variablesForTemplate);
+
+            echo $output;
 
 
-            error_log($output);
         }
 
         /*

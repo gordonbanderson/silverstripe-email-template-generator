@@ -84,6 +84,14 @@
     <!-- Progressive Enhancements -->
     <style>
 
+        h1 {
+          color: $HeadingColor;
+        }
+
+        a {
+          color: $LinkColor;
+        }
+
         /* What it does: Hover styles for buttons */
         .button-td,
         .button-a {

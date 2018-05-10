@@ -1,15 +1,21 @@
 ---
-Name: silverstripe-email-template-generator
+Name: silverstripe-email-template-generator-parameters
 ---
 
 Suilven\EmailTemplateGenerator\Task\GenerateEmailTemplatesTask:
   template_scheme: cerberus
+  output_theme_name: myemailtheme
 
   template_variables:
-    - client_name: 'Acme Inc'
-    - client_admin_team_name: 'Acme Inc Team'
+    - company_name: 'Acme Inc'
+    - company_address: '12B Acacia Avenue, Springfield, 12400'
+    - company_phone_number: 0142 3232324
+    - company_admin_team_name: 'Acme Inc Team'
 
-    # colors
+    # ---- colors
+
+    # link color
+    - link_color: 'orange'
 
     # buttons
     - button_hover_background_color: '#555'
@@ -18,11 +24,20 @@ Suilven\EmailTemplateGenerator\Task\GenerateEmailTemplatesTask:
     # main background color
     - background_color: '#fff'
 
+    # content color
+    - heading_color: '#444'
+    - text_color: '#222'
+
+    # ---- alignment ----
+    # alignment, left or center
+    - text_alignment: left
+
+    # ---- graphics ----
     # logo
-    - logo_url: https://www.silverstripe.org/themes/ssv3/img/global-logo-open-source.svg
-    - logo_width: 192
-    - logo_height: 46
+    - logo_url: https://www.silverstripe.org/assets/Media-assets/Light/silverstripe-logo-vertical-light.png
+    - logo_width: 100
+    - logo_height: 100
 
     # hero image
-    - hero_image_url: http://placehold.it/600x300
+    - hero_image_url: https://openclipart.org/image/800px/svg_to_png/79981/Banner-003A.png
     - hero_image_width: 600
