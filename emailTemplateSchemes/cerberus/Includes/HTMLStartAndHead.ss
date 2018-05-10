@@ -91,8 +91,8 @@
         }
         .button-td:hover,
         .button-a:hover {
-            background: #555555 !important;
-            border-color: #555555 !important;
+            background: $ButtonHoverBackgroundColor !important;
+            border-color: $ButtonHoverBorderColor !important;
         }
 
         /* Media Queries */
